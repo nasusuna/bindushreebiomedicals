@@ -3,174 +3,294 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Blue Oak Diagnostics</title>
-<meta name="description" content="Blue Oak Diagnostics supplies, installs and services clinical laboratory analyzers, and makes its own reagents, rapid tests and lab consumables for labs and hospitals across India.">
+<title>Blue Oak Diagnostics | Lab Analyzers, Reagents & Service in India</title>
+<meta name="description" content="Blue Oak Diagnostics supplies, installs and services biochemistry, hematology, electrolyte, immunoassay and coagulation analyzers, and makes Blue Oak reagents, rapid tests and lab consumables for labs and hospitals across India.">
+<meta property="og:title" content="Blue Oak Diagnostics">
+<meta property="og:description" content="Lab analyzers, reagents and service engineers for pathology labs and hospitals in India.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1200&q=70">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Sans+3:wght@400;600&display=swap">
 <style>
-/* Layout: lab-bench clarity. Ink-blue on cool paper; each instrument line is colour-coded by the blood-collection tube cap it runs on. */
+/* Layout: corporate IVD supplier. Navy + clinical blue on white, photo-led hero and product cards, multi-column footer. */
 :root{
-  --bg:#F3F6F8;        /* cool lab paper */
-  --surface:#FFFFFF;
-  --ink:#10283A;       /* oak-blue ink */
-  --muted:#4F6272;
-  --line:#D5DEE5;
-  --accent:#1F5E8C;    /* Blue Oak */
-  --accent-ink:#FFFFFF;
-  --accent-soft:#E2EDF5;
-  --paper:#FBFCF7;     /* thermal printout */
-  --todo:#9A5B00;
-  --todo-bg:#FFF4DF;
-  /* tube cap colours */
-  --cap-gold:#D3A12A; --cap-lav:#8C7BC0; --cap-green:#3D9459; --cap-red:#C4473D; --cap-blue:#6AA3D6; --cap-grey:#8C969E;
-  --f-display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --navy:#0A2342;
+  --navy-2:#12345E;
+  --blue:#1663C7;
+  --blue-dk:#0F4FA3;
+  --teal:#13A3A9;
+  --tint:#EEF4FB;
+  --ink:#16243A;
+  --muted:#5A6B80;
+  --line:#DCE5EF;
+  --white:#FFFFFF;
+  --todo:#9A5B00; --todo-bg:#FFF4DF;
+  --f-head:"Plus Jakarta Sans","Segoe UI",system-ui,sans-serif;
   --f-body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
-  --f-mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Consolas,monospace;
-  --wrap:72rem;
+  --wrap:76rem;
+  --shadow:0 10px 30px -12px rgba(10,35,66,.25);
+  color-scheme:light;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0C1822;--surface:#122230;--ink:#E3ECF2;--muted:#9AAEBD;--line:#24394A;
-  --accent:#6FB1E3;--accent-ink:#0C1822;--accent-soft:#183247;--paper:#16283A;--todo:#F2B65A;--todo-bg:#33280F;color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#0C1822;--surface:#122230;--ink:#E3ECF2;--muted:#9AAEBD;--line:#24394A;
-  --accent:#6FB1E3;--accent-ink:#0C1822;--accent-soft:#183247;--paper:#16283A;--todo:#F2B65A;--todo-bg:#33280F;color-scheme:dark}
-
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-[id]{scroll-margin-top:5.5rem}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--f-body);margin:0}
-.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
-h1,h2,h3{font-family:var(--f-display);line-height:1.1;text-wrap:balance;margin:0}
-h1{font-size:clamp(2.2rem,5.4vw,3.75rem);font-weight:700;letter-spacing:-.02em}
-h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:700;letter-spacing:-.01em}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+[id]{scroll-margin-top:6rem}
+body{margin:0;background:var(--white);color:var(--ink);font:400 1.0625rem/1.65 var(--f-body)}
+img{max-width:100%;display:block}
+a{color:var(--blue)}
+h1,h2,h3,h4{font-family:var(--f-head);color:var(--navy);line-height:1.15;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.1rem,5vw,3.5rem);font-weight:800;letter-spacing:-.02em;color:var(--white)}
+h2{font-size:clamp(1.75rem,3.4vw,2.5rem);font-weight:800;letter-spacing:-.015em}
 h3{font-size:1.2rem;font-weight:700}
 p{margin:0}
-a{color:var(--accent)}
-a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-.eyebrow{font:600 .78rem/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
-.lede{color:var(--muted);font-size:1.15rem;max-width:38rem}
-.todo{color:var(--todo);background:var(--todo-bg);border:1px dashed var(--todo);border-radius:4px;padding:0 .3em;font-size:.92em}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
+.todo{color:var(--todo);background:var(--todo-bg);border:1px dashed var(--todo);border-radius:4px;padding:0 .3em}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+
+.kicker{display:inline-flex;align-items:center;gap:.6rem;font:700 .8rem/1 var(--f-head);letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.kicker::before{content:"";width:28px;height:2px;background:currentColor}
+.sec-head{display:grid;gap:.9rem;max-width:46rem;margin-bottom:2.75rem}
+.sec-head.center{margin-inline:auto;text-align:center;justify-items:center}
+.sec-head p{color:var(--muted);font-size:1.1rem}
+section{padding-block:clamp(3.5rem,8vw,6rem)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;border-radius:6px;padding:.85rem 1.5rem;font:700 .98rem var(--f-head);text-decoration:none;cursor:pointer;border:2px solid transparent;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.btn-primary{background:var(--blue);color:var(--white)}
+.btn-primary:hover{background:var(--blue-dk);transform:translateY(-1px)}
+.btn-outline{border-color:rgba(255,255,255,.7);color:var(--white)}
+.btn-outline:hover{background:var(--white);color:var(--navy)}
+.btn-white{background:var(--white);color:var(--navy)}
+.btn-white:hover{background:var(--tint)}
+
+/* top bar */
+.topbar{background:var(--navy);color:#C9D6E6;font-size:.9rem}
+.topbar .wrap{display:flex;justify-content:space-between;gap:.5rem 1.5rem;flex-wrap:wrap;padding-block:.5rem}
+.topbar span{display:inline-flex;align-items:center;gap:.4rem}
+.topbar svg{width:15px;height:15px;stroke:var(--teal)}
+.topbar .left{display:flex;gap:1.5rem;flex-wrap:wrap}
+@media (max-width:640px){.topbar .right{display:none}}
 
 /* header */
-.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.site-head .wrap{display:flex;align-items:center;gap:1.5rem;min-height:4rem;flex-wrap:wrap}
-.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--ink);font:700 1.15rem var(--f-display)}
-.brand svg{flex:none}
-.nav{display:flex;gap:1.25rem;margin-left:auto;flex-wrap:wrap}
-.nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.98rem}
-.nav a:hover{color:var(--accent)}
-.btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:var(--accent-ink);border:0;border-radius:6px;padding:.75rem 1.2rem;font:600 1rem var(--f-body);text-decoration:none;cursor:pointer}
-.btn:hover{filter:brightness(1.08)}
-.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
-@media (max-width:760px){.nav{order:3;width:100%;margin-left:0;padding-bottom:.6rem;gap:1rem}.site-head .btn{margin-left:auto}}
+.header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--white);box-shadow:0 1px 0 var(--line)}
+.header .wrap{display:flex;align-items:center;gap:1.5rem;min-height:4.75rem}
+.logo{display:flex;align-items:center;gap:.65rem;text-decoration:none}
+.logo-mark{width:42px;height:42px;flex:none}
+.logo-text{display:grid;line-height:1}
+.logo-text b{font:800 1.3rem var(--f-head);color:var(--navy);letter-spacing:-.01em}
+.logo-text small{font:700 .66rem var(--f-head);letter-spacing:.32em;color:var(--blue);margin-top:.3rem}
+.nav{margin-left:auto;display:flex;align-items:center;gap:1.75rem}
+.nav a{font:600 .98rem var(--f-head);color:var(--ink);text-decoration:none;padding-block:.4rem;border-bottom:2px solid transparent}
+.nav a:hover{color:var(--blue);border-color:var(--blue)}
+.menu-btn{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:6px;padding:.5rem;cursor:pointer}
+.menu-btn svg{width:24px;height:24px;stroke:var(--navy)}
+@media (max-width:960px){
+  .menu-btn{display:inline-flex}
+  .nav{position:absolute;left:0;right:0;top:100%;background:var(--white);flex-direction:column;align-items:stretch;gap:0;padding:.5rem clamp(1rem,4vw,2rem) 1rem;box-shadow:var(--shadow)}
+  .nav a{padding:.8rem 0;border-bottom:1px solid var(--line)}
+  .nav .btn{margin-top:.8rem}
+  .nav:not(.open){display:none}
+}
 
 /* hero */
-.hero{padding-block:clamp(3rem,7vw,5.5rem)}
-.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,4rem);align-items:center}
-.hero-copy{display:grid;gap:1.4rem;min-width:0}
-.hero-actions{display:flex;gap:.8rem;flex-wrap:wrap}
-.caps{display:flex;gap:.45rem;align-items:center;color:var(--muted);font:.85rem var(--f-mono);flex-wrap:wrap}
-.cap{width:.9rem;height:.9rem;border-radius:50% 50% 3px 3px;display:inline-block}
-@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}}
+.hero{position:relative;color:var(--white);background:var(--navy) url("https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1900&q=70") center/cover no-repeat;padding-block:clamp(5rem,11vw,8.5rem) clamp(7rem,12vw,9.5rem)}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,35,66,.95) 0%,rgba(10,35,66,.82) 45%,rgba(10,35,66,.35) 100%)}
+.hero .wrap{position:relative;display:grid;gap:1.5rem;max-width:var(--wrap)}
+.hero-copy{max-width:40rem;display:grid;gap:1.4rem}
+.hero .kicker{color:#8FD3F5}
+.hero p.lead{font-size:clamp(1.05rem,1.6vw,1.25rem);color:#D7E3F0;max-width:36rem}
+.hero-actions{display:flex;gap:.9rem;flex-wrap:wrap;margin-top:.4rem}
+.hero-points{display:flex;gap:.6rem 1.5rem;flex-wrap:wrap;color:#D7E3F0;font-size:.98rem;margin-top:.6rem}
+.hero-points span{display:inline-flex;align-items:center;gap:.45rem}
+.hero-points svg{width:18px;height:18px;stroke:var(--teal);flex:none}
 
-.printout{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:1.4rem 1.4rem 1.6rem;font:.85rem/1.7 var(--f-mono);box-shadow:0 18px 40px -24px rgba(16,40,58,.45);position:relative;min-width:0;
-  -webkit-mask:linear-gradient(#000 0 0) top/100% calc(100% - 10px) no-repeat, conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/14px 10px repeat-x;
-          mask:linear-gradient(#000 0 0) top/100% calc(100% - 10px) no-repeat, conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/14px 10px repeat-x}
-.printout .ph{text-align:center;font-weight:600;letter-spacing:.08em;border-bottom:1px dashed var(--muted);padding-bottom:.6rem;margin-bottom:.6rem}
-.printout dl{display:grid;grid-template-columns:1fr auto;gap:.15rem 1rem;margin:0;font-variant-numeric:tabular-nums}
-.printout dt{color:var(--muted)}
-.printout dd{margin:0;text-align:right}
-.printout .rule{grid-column:1/-1;border-top:1px dashed var(--muted);margin:.5rem 0}
-.printout .foot{margin-top:.7rem;color:var(--muted);font-size:.75rem;text-align:center}
+/* feature strip overlapping hero */
+.strip{position:relative;z-index:2;margin-top:clamp(-5rem,-7vw,-4rem)}
+.strip-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:var(--white);border-radius:10px;box-shadow:var(--shadow);overflow:hidden}
+.strip-item{display:grid;grid-template-columns:auto 1fr;gap:.9rem;align-items:start;padding:1.6rem 1.4rem;border-left:1px solid var(--line)}
+.strip-item:first-child{border-left:0}
+.strip-item .ic{width:46px;height:46px;border-radius:10px;background:var(--tint);display:grid;place-items:center}
+.strip-item .ic svg{width:24px;height:24px;stroke:var(--blue)}
+.strip-item h4{font-size:1rem;margin-bottom:.2rem}
+.strip-item p{font-size:.93rem;color:var(--muted);line-height:1.45}
+@media (max-width:980px){.strip-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.strip-item:nth-child(3){border-left:0}.strip-item:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:560px){.strip-grid{grid-template-columns:1fr}.strip-item{border-left:0}.strip-item+.strip-item{border-top:1px solid var(--line)}}
 
-/* sections */
-section{padding-block:clamp(3.5rem,7vw,5.5rem)}
-.sec-head{display:grid;gap:.9rem;margin-bottom:2.5rem;max-width:44rem}
-.band{background:var(--surface);border-block:1px solid var(--line)}
+/* products */
+.products{background:var(--white)}
+.p-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.6rem}
+@media (max-width:980px){.p-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.p-grid{grid-template-columns:1fr}}
+.p-card{background:var(--white);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .25s,transform .25s}
+.p-card:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+.p-img{aspect-ratio:16/10;overflow:hidden;background:var(--tint);position:relative}
+.p-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.p-card:hover .p-img img{transform:scale(1.05)}
+.p-tag{position:absolute;left:1rem;bottom:1rem;background:var(--white);color:var(--navy);font:700 .72rem var(--f-head);letter-spacing:.06em;text-transform:uppercase;padding:.35rem .6rem;border-radius:4px;display:inline-flex;align-items:center;gap:.4rem}
+.p-tag i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.p-body{padding:1.4rem 1.4rem 1.5rem;display:flex;flex-direction:column;gap:.7rem;flex:1}
+.p-body p{color:var(--muted);font-size:.98rem}
+.p-body ul{margin:0;padding:0;list-style:none;display:grid;gap:.35rem;font-size:.95rem}
+.p-body li{display:flex;gap:.5rem;align-items:flex-start}
+.p-body li svg{width:16px;height:16px;stroke:var(--teal);flex:none;margin-top:.3rem}
+.p-link{margin-top:auto;padding-top:.6rem;font:700 .95rem var(--f-head);color:var(--blue);text-decoration:none;display:inline-flex;align-items:center;gap:.4rem}
+.p-link:hover{gap:.7rem}
 
-/* instrument grid */
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
-@media (max-width:980px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:620px){.grid{grid-template-columns:1fr}}
-.inst{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:1.5rem;display:grid;grid-template-rows:auto auto 1fr auto;gap:.8rem;min-width:0}
-.tube{display:flex;align-items:center;gap:.55rem;font:600 .74rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-.tube .cap{width:1.1rem;height:1.1rem}
-.inst p{color:var(--muted)}
-.inst ul{margin:0;padding:0;list-style:none;display:grid;gap:.3rem;font-size:.95rem}
-.inst li{padding-left:1rem;position:relative}
-.inst li::before{content:"";position:absolute;left:0;top:.65em;width:.4rem;height:2px;background:var(--accent)}
-.spec{border-top:1px solid var(--line);padding-top:.75rem;font:.8rem var(--f-mono);color:var(--muted);font-variant-numeric:tabular-nums}
+/* split sections */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+@media (max-width:900px){.split{grid-template-columns:1fr}}
+.split-media{position:relative;min-width:0}
+.split-media img{width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:12px}
+.badge{position:absolute;right:-1rem;bottom:-1.25rem;background:var(--blue);color:var(--white);border-radius:10px;padding:1.1rem 1.3rem;box-shadow:var(--shadow);max-width:14rem}
+.badge b{display:block;font:800 1.15rem var(--f-head)}
+.badge span{font-size:.9rem;color:#D9E7F7}
+@media (max-width:600px){.badge{right:.75rem;bottom:.75rem}}
+.split-copy{display:grid;gap:1.25rem;min-width:0}
+.split-copy>p{color:var(--muted);font-size:1.08rem}
+.range{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+@media (max-width:520px){.range{grid-template-columns:1fr}}
+.range div{background:var(--tint);border-radius:8px;padding:1rem 1.1rem}
+.range h4{font-size:1rem;margin-bottom:.2rem}
+.range p{font-size:.92rem;color:var(--muted);line-height:1.45}
+.fine{font-size:.88rem;color:var(--muted)}
 
-/* own brand */
-.own{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,5vw,4rem);align-items:start}
-@media (max-width:860px){.own{grid-template-columns:1fr}}
-.own-copy{display:grid;gap:1.2rem;min-width:0}
-.catalog{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg);min-width:0}
-.catalog .row{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;padding:1.1rem 1.25rem;border-top:1px solid var(--line)}
-.catalog .row:first-child{border-top:0}
-.catalog .code{font:600 .8rem var(--f-mono);color:var(--accent);letter-spacing:.04em}
-.catalog h3{font-size:1.05rem;margin-bottom:.25rem}
-.catalog p{color:var(--muted);font-size:.95rem}
-@media (max-width:480px){.catalog .row{grid-template-columns:1fr;gap:.35rem}}
-.note{font-size:.9rem;color:var(--muted);border-left:3px solid var(--line);padding-left:.9rem}
+/* why */
+.why{background:var(--tint)}
+.why-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.4rem}
+@media (max-width:980px){.why-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.why-grid{grid-template-columns:1fr}}
+.why-card{background:var(--white);border-radius:10px;padding:1.75rem 1.5rem;display:grid;gap:.7rem;align-content:start;border-top:3px solid var(--blue)}
+.why-card .ic{width:52px;height:52px;border-radius:50%;background:var(--tint);display:grid;place-items:center}
+.why-card .ic svg{width:26px;height:26px;stroke:var(--blue)}
+.why-card p{color:var(--muted);font-size:.97rem}
 
-/* service */
-.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem 2.5rem}
-@media (max-width:860px){.svc{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:560px){.svc{grid-template-columns:1fr}}
-.svc div{display:grid;gap:.45rem;align-content:start;border-top:2px solid var(--ink);padding-top:1rem}
-.svc p{color:var(--muted)}
+/* service band */
+.service{background:var(--navy);color:#D2DEEC}
+.service h2,.service h3,.service h4{color:var(--white)}
+.service .kicker{color:#8FD3F5}
+.service .split-copy>p{color:#BFD0E3}
+.svc-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.1rem 1.5rem}
+@media (max-width:520px){.svc-list{grid-template-columns:1fr}}
+.svc-list div{display:grid;grid-template-columns:auto 1fr;gap:.75rem}
+.svc-list .ic{width:40px;height:40px;border-radius:8px;background:var(--navy-2);display:grid;place-items:center}
+.svc-list .ic svg{width:20px;height:20px;stroke:var(--teal)}
+.svc-list h4{font-size:1rem;margin-bottom:.15rem}
+.svc-list p{font-size:.92rem;line-height:1.45;color:#AFC2D8}
+.service .split-media img{aspect-ratio:4/5}
+.service .badge{left:-1rem;right:auto;background:var(--teal)}
+@media (max-width:600px){.service .badge{left:.75rem}}
 
-/* steps */
-.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.25rem;counter-reset:s;list-style:none;margin:0;padding:0}
-@media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.5rem;list-style:none;padding:0;margin:0;counter-reset:s;position:relative}
+.steps::before{content:"";position:absolute;top:28px;left:12%;right:12%;height:2px;background:repeating-linear-gradient(90deg,var(--line) 0 8px,transparent 8px 14px)}
+.steps li{counter-increment:s;display:grid;gap:.6rem;justify-items:center;text-align:center;position:relative}
+.steps li::before{content:counter(s,decimal-leading-zero);width:56px;height:56px;border-radius:50%;background:var(--white);border:2px solid var(--blue);color:var(--blue);display:grid;place-items:center;font:800 1.05rem var(--f-head)}
+.steps p{color:var(--muted);font-size:.97rem;max-width:16rem}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.steps::before{display:none}}
 @media (max-width:520px){.steps{grid-template-columns:1fr}}
-.steps li{counter-increment:s;display:grid;gap:.5rem;align-content:start}
-.steps li::before{content:"Step " counter(s);font:600 .78rem var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
-.steps p{color:var(--muted)}
 
-/* serve */
-.serve{display:flex;flex-wrap:wrap;gap:.6rem}
-.serve span{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:.45rem .95rem;font-weight:600;font-size:.95rem}
+/* clients */
+.clients{padding-top:0}
+.chips{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
+.chips span{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--line);border-radius:999px;padding:.6rem 1.1rem;font:600 .95rem var(--f-head);color:var(--navy);background:var(--white)}
+.chips svg{width:18px;height:18px;stroke:var(--blue)}
 
-/* about + enquiry */
-.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,5vw,4rem)}
-@media (max-width:860px){.contact{grid-template-columns:1fr}}
-.contact-info{display:grid;gap:1.4rem;align-content:start;min-width:0}
-.facts{display:grid;gap:.8rem;margin:0}
-.facts div{display:grid;grid-template-columns:6.5rem 1fr;gap:.75rem}
-.facts dt{font:600 .78rem var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:.2rem}
-.facts dd{margin:0;min-width:0;overflow-wrap:anywhere}
-form{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:clamp(1.25rem,3vw,2rem);display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+/* cta band */
+.cta{background:linear-gradient(110deg,var(--blue) 0%,var(--blue-dk) 60%,var(--navy-2) 100%);color:var(--white);padding-block:clamp(2.75rem,6vw,3.75rem)}
+.cta .wrap{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+.cta h2{color:var(--white);font-size:clamp(1.5rem,3vw,2.1rem)}
+.cta p{color:#DCE9F8;margin-top:.4rem}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,5vw,4rem);align-items:start}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+.c-info{display:grid;gap:1.4rem;min-width:0}
+.c-info>p{color:var(--muted)}
+.c-list{display:grid;gap:1.1rem}
+.c-list div{display:grid;grid-template-columns:auto 1fr;gap:.9rem;align-items:start}
+.c-list .ic{width:44px;height:44px;border-radius:10px;background:var(--tint);display:grid;place-items:center}
+.c-list .ic svg{width:21px;height:21px;stroke:var(--blue)}
+.c-list b{display:block;font:700 .82rem var(--f-head);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.c-list span{overflow-wrap:anywhere}
+form{background:var(--white);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:clamp(1.4rem,3vw,2.2rem);display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.1rem}
+form h3{grid-column:1/-1;font-size:1.4rem}
 form .full{grid-column:1/-1}
 @media (max-width:560px){form{grid-template-columns:1fr}}
-label{display:grid;gap:.35rem;font-weight:600;font-size:.92rem;min-width:0}
-input,select,textarea{font:400 1rem var(--f-body);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.7rem .8rem;width:100%}
-textarea{min-height:7rem;resize:vertical}
+label{display:grid;gap:.35rem;font:600 .9rem var(--f-head);color:var(--navy);min-width:0}
+input,select,textarea{font:400 1rem var(--f-body);color:var(--ink);background:#F8FAFD;border:1px solid var(--line);border-radius:6px;padding:.75rem .85rem;width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--blue);background:var(--white);outline:none;box-shadow:0 0 0 3px rgba(22,99,199,.15)}
+textarea{min-height:7.5rem;resize:vertical}
+.form-foot{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
 .form-status{font-size:.95rem;color:var(--muted)}
-.form-status.ok{color:var(--accent);font-weight:600}
+.form-status.ok{color:var(--teal);font-weight:600}
 
-footer{border-top:1px solid var(--line);padding-block:2rem;color:var(--muted);font-size:.9rem}
-footer .wrap{display:flex;gap:1rem 2rem;flex-wrap:wrap;justify-content:space-between}
+/* footer */
+footer{background:#071A31;color:#9FB1C7;font-size:.95rem}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:2rem;padding-block:3.5rem 2.5rem}
+@media (max-width:900px){.f-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.f-grid{grid-template-columns:1fr}}
+.f-grid h4{color:var(--white);font-size:1rem;margin-bottom:1rem}
+.f-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:.55rem}
+.f-grid a{color:#9FB1C7;text-decoration:none}
+.f-grid a:hover{color:var(--white)}
+.f-about{display:grid;gap:1rem;align-content:start}
+.f-about .logo-text b{color:var(--white)}
+.f-about .logo-text small{color:#8FD3F5}
+.f-bottom{border-top:1px solid #16304F;padding-block:1.25rem;display:flex;justify-content:space-between;gap:.5rem 2rem;flex-wrap:wrap;font-size:.88rem}
 </style>
 </head>
 <body>
 
-<header class="site-head">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-tool" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6L4.5 19a1.5 1.5 0 0 0 1.3 2h12.4a1.5 1.5 0 0 0 1.3-2L14 9V3"/><path d="M7 15h10"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></symbol>
+    <symbol id="i-rupee" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M6 8h12M6 13l8.5 8M6 13h3a5 5 0 0 0 0-10"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-grad" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.5 9a9 9 0 0 1 14.9-3.4L23 10M1 14l4.6 4.4A9 9 0 0 0 20.5 15"/></symbol>
+    <symbol id="i-hosp" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 8v8M8 12h8"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  </defs>
+</svg>
+
+<div class="topbar">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Blue Oak Diagnostics home">
-      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--accent)"/><path d="M16 6c-4.5 0-7.5 3.2-7.5 7 0 2.6 1.4 4.4 3.2 5.3-.2 1 .3 2 1.4 2.2h1.4V26h3v-5.5h1.4c1.1-.2 1.6-1.2 1.4-2.2 1.8-.9 3.2-2.7 3.2-5.3 0-3.8-3-7-7.5-7z" fill="var(--accent-ink)"/></svg>
-      Blue Oak Diagnostics
+    <div class="left">
+      <span><svg><use href="#i-phone"/></svg><span class="todo">+91 XXXXX XXXXX</span></span>
+      <span><svg><use href="#i-mail"/></svg>sales@blueoak.cloud</span>
+    </div>
+    <div class="right"><span><svg><use href="#i-clock"/></svg>Mon to Sat, 9:30 am to 6:30 pm IST</span></div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Blue Oak Diagnostics home">
+      <svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true">
+        <rect width="48" height="48" rx="10" fill="#0A2342"/>
+        <path d="M24 9c-6.6 0-11 4.6-11 10.2 0 3.8 2 6.4 4.7 7.7-.3 1.5.5 2.9 2 3.2h2.3V39h4v-8.9h2.3c1.5-.3 2.3-1.7 2-3.2 2.7-1.3 4.7-3.9 4.7-7.7C35 13.6 30.6 9 24 9z" fill="#1663C7"/>
+        <circle cx="24" cy="19" r="3.2" fill="#13A3A9"/>
+      </svg>
+      <span class="logo-text"><b>Blue Oak</b><small>DIAGNOSTICS</small></span>
     </a>
-    <nav class="nav" aria-label="Main">
-      <a href="#instruments">Instruments</a>
-      <a href="#reagents">Our reagents</a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Open menu"><svg><use href="#i-menu"/></svg></button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#products">Products</a>
+      <a href="#reagents">Blue Oak Reagents</a>
       <a href="#service">Service &amp; AMC</a>
-      <a href="#about">About</a>
+      <a href="#why">Why Blue Oak</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-primary" href="#contact">Get a Quote</a>
     </nav>
-    <a class="btn" href="#enquiry">Request a quote</a>
   </div>
 </header>
 
@@ -178,195 +298,232 @@ footer .wrap{display:flex;gap:1rem 2rem;flex-wrap:wrap;justify-content:space-bet
   <section class="hero">
     <div class="wrap">
       <div class="hero-copy">
-        <span class="eyebrow">Clinical laboratory solutions · India</span>
-        <h1>Analyzers, reagents and the engineers who keep them running.</h1>
-        <p class="lede">Blue Oak Diagnostics supplies, installs and services lab instruments for pathology labs and hospitals, and makes its own reagents, rapid tests and consumables to run on them.</p>
+        <span class="kicker">Clinical Laboratory Solutions</span>
+        <h1>Reliable lab analyzers, reagents and service for every diagnostic lab</h1>
+        <p class="lead">Blue Oak Diagnostics supplies, installs and maintains laboratory instruments for pathology labs and hospitals, and makes its own reagents, rapid tests and consumables to keep them running.</p>
         <div class="hero-actions">
-          <a class="btn" href="#enquiry">Talk to an application specialist</a>
-          <a class="btn ghost" href="#instruments">Browse instruments</a>
+          <a class="btn btn-primary" href="#contact">Request a Quote <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-outline" href="#products">Explore Products</a>
         </div>
-        <div class="caps" aria-label="Sample types covered">
-          <span class="cap" style="background:var(--cap-gold)"></span>
-          <span class="cap" style="background:var(--cap-lav)"></span>
-          <span class="cap" style="background:var(--cap-green)"></span>
-          <span class="cap" style="background:var(--cap-red)"></span>
-          <span class="cap" style="background:var(--cap-blue)"></span>
-          <span>Every routine sample type, one supplier</span>
+        <div class="hero-points">
+          <span><svg><use href="#i-check"/></svg>Installation &amp; training included</span>
+          <span><svg><use href="#i-check"/></svg>AMC / CMC plans</span>
+          <span><svg><use href="#i-check"/></svg>Reagent rental options</span>
         </div>
       </div>
-
-      <aside class="printout" aria-label="Example lab setup">
-        <div class="ph">BLUE OAK · LAB SETUP SHEET</div>
-        <dl>
-          <dt>Profile</dt><dd>Mid-size path lab</dd>
-          <dt>Daily samples</dt><dd>~150</dd>
-          <div class="rule"></div>
-          <dt>Biochemistry</dt><dd>Fully automated</dd>
-          <dt>Hematology</dt><dd>5-part CBC</dd>
-          <dt>Electrolytes</dt><dd>ISE Na/K/Cl</dd>
-          <dt>Hormones</dt><dd>CLIA, benchtop</dd>
-          <dt>Coagulation</dt><dd>PT / APTT</dd>
-          <div class="rule"></div>
-          <dt>Install + training</dt><dd>Included</dd>
-          <dt>Reagents</dt><dd>Monthly supply</dd>
-          <dt>Service</dt><dd>AMC / CMC</dd>
-        </dl>
-        <div class="foot">Example configuration · yours is planned with you</div>
-      </aside>
     </div>
   </section>
 
-  <section id="instruments" class="band">
+  <div class="strip">
     <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow">Instruments</span>
-        <h2>Lab analyzers we supply, install and service</h2>
-        <p class="lede">We are authorised sales and service partners for established analyzer manufacturers. Each line below is matched to the sample it runs on, so you can see the whole bench at a glance.</p>
+      <div class="strip-grid">
+        <div class="strip-item"><span class="ic"><svg><use href="#i-flask"/></svg></span><div><h4>Complete lab range</h4><p>Biochemistry, hematology, electrolytes, immunoassay and coagulation.</p></div></div>
+        <div class="strip-item"><span class="ic"><svg><use href="#i-tool"/></svg></span><div><h4>Engineer-led service</h4><p>Installation, preventive maintenance and breakdown support.</p></div></div>
+        <div class="strip-item"><span class="ic"><svg><use href="#i-truck"/></svg></span><div><h4>Regular reagent supply</h4><p>Scheduled deliveries so your lab never runs short.</p></div></div>
+        <div class="strip-item"><span class="ic"><svg><use href="#i-rupee"/></svg></span><div><h4>Transparent pricing</h4><p>Clear quotes with running cost per test, not just machine price.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="products" class="products">
+    <div class="wrap">
+      <div class="sec-head center">
+        <span class="kicker">Our Products</span>
+        <h2>Laboratory analyzers for every department</h2>
+        <p>Authorised sales and service for established analyzer manufacturers, sized for clinics, standalone labs and hospital laboratories.</p>
       </div>
 
-      <div class="grid">
-        <article class="inst">
-          <span class="tube"><span class="cap" style="background:var(--cap-gold)"></span>Serum · SST gold top</span>
-          <h3>Biochemistry analyzers</h3>
-          <p>From semi-automated photometers for small labs to fully automated random-access systems for high sample loads.</p>
-          <ul><li>Semi-auto and fully auto models</li><li>LFT, KFT, lipid, glucose and special chemistry</li><li>Open systems that run Blue Oak reagents</li></ul>
-          <div class="spec">Throughput options · 100 to 400+ tests/hr</div>
+      <div class="p-grid">
+        <article class="p-card">
+          <div class="p-img"><img src="https://images.unsplash.com/photo-1655210913810-33acfa96d1e6?auto=format&fit=crop&w=800&q=70" alt="Automated clinical chemistry analyzer with sample tubes" loading="lazy"><span class="p-tag"><i style="background:#D3A12A"></i>Serum</span></div>
+          <div class="p-body">
+            <h3>Biochemistry Analyzers</h3>
+            <p>Semi-automated and fully automated systems for routine and special chemistry.</p>
+            <ul><li><svg><use href="#i-check"/></svg>LFT, KFT, lipid profile, glucose</li><li><svg><use href="#i-check"/></svg>100 to 400+ tests per hour options</li><li><svg><use href="#i-check"/></svg>Open systems for Blue Oak reagents</li></ul>
+            <a class="p-link" href="#contact">Enquire now <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+          </div>
         </article>
 
-        <article class="inst">
-          <span class="tube"><span class="cap" style="background:var(--cap-lav)"></span>Whole blood · EDTA lavender top</span>
-          <h3>Hematology analyzers</h3>
-          <p>Compact cell counters for complete blood counts, sized for clinics through to hospital labs.</p>
-          <ul><li>3-part and 5-part differential</li><li>Small sample volume, results in about a minute</li><li>Matching diluents, lyse and controls</li></ul>
-          <div class="spec">Parameters · 19 to 29+ by model</div>
+        <article class="p-card">
+          <div class="p-img"><img src="https://images.unsplash.com/photo-1606206591513-adbfbdd7a177?auto=format&fit=crop&w=800&q=70" alt="Blood collection tubes with coloured caps in a rack" loading="lazy"><span class="p-tag"><i style="background:#8C7BC0"></i>EDTA whole blood</span></div>
+          <div class="p-body">
+            <h3>Hematology Analyzers</h3>
+            <p>Compact cell counters for fast, accurate complete blood counts.</p>
+            <ul><li><svg><use href="#i-check"/></svg>3-part and 5-part differential</li><li><svg><use href="#i-check"/></svg>Results in about a minute</li><li><svg><use href="#i-check"/></svg>Matching diluent, lyse and controls</li></ul>
+            <a class="p-link" href="#contact">Enquire now <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+          </div>
         </article>
 
-        <article class="inst">
-          <span class="tube"><span class="cap" style="background:var(--cap-green)"></span>Plasma · Li-heparin green top</span>
-          <h3>Electrolyte analyzers</h3>
-          <p>Ion-selective electrode analyzers for fast sodium, potassium and chloride results with low cost per test.</p>
-          <ul><li>Na⁺, K⁺, Cl⁻, with iCa²⁺ and Li⁺ options</li><li>Touch screen, barcode reader, data export</li><li>Electrodes, reagent packs and service</li></ul>
-          <div class="spec">Reported in · mmol/L</div>
+        <article class="p-card">
+          <div class="p-img"><img src="https://images.unsplash.com/photo-1732690233982-1d4567384ea1?auto=format&fit=crop&w=800&q=70" alt="Laboratory technician operating an analyzer" loading="lazy"><span class="p-tag"><i style="background:#3D9459"></i>Heparin plasma</span></div>
+          <div class="p-body">
+            <h3>Electrolyte Analyzers</h3>
+            <p>ISE analyzers with touch screen, barcode reader and low cost per test.</p>
+            <ul><li><svg><use href="#i-check"/></svg>Na⁺, K⁺, Cl⁻ with iCa²⁺ / Li⁺ options</li><li><svg><use href="#i-check"/></svg>Result in under a minute</li><li><svg><use href="#i-check"/></svg>Electrodes and reagent packs</li></ul>
+            <a class="p-link" href="#contact">Enquire now <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+          </div>
         </article>
 
-        <article class="inst">
-          <span class="tube"><span class="cap" style="background:var(--cap-red)"></span>Serum · plain red top</span>
-          <h3>Immunoassay &amp; ELISA</h3>
-          <p>Benchtop CLIA and fluorescence analyzers for hormones and markers, plus ELISA readers and plate washers.</p>
-          <ul><li>Thyroid, fertility, cardiac and infection panels</li><li>Compact CLIA for labs moving off manual ELISA</li><li>ELISA reader and washer pairs</li></ul>
-          <div class="spec">Common units · µIU/mL, ng/mL, pg/mL</div>
+        <article class="p-card">
+          <div class="p-img"><img src="https://images.unsplash.com/photo-1579165466949-3180a3d056d5?auto=format&fit=crop&w=800&q=70" alt="Scientist pipetting samples for immunoassay" loading="lazy"><span class="p-tag"><i style="background:#C4473D"></i>Serum</span></div>
+          <div class="p-body">
+            <h3>Immunoassay &amp; ELISA</h3>
+            <p>Benchtop CLIA and fluorescence analyzers, ELISA readers and washers.</p>
+            <ul><li><svg><use href="#i-check"/></svg>Thyroid, fertility, cardiac panels</li><li><svg><use href="#i-check"/></svg>Compact CLIA for growing labs</li><li><svg><use href="#i-check"/></svg>ELISA reader and washer pairs</li></ul>
+            <a class="p-link" href="#contact">Enquire now <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+          </div>
         </article>
 
-        <article class="inst">
-          <span class="tube"><span class="cap" style="background:var(--cap-blue)"></span>Plasma · Na-citrate light blue top</span>
-          <h3>Coagulation analyzers</h3>
-          <p>Semi-automated and automated coagulation systems for routine and pre-surgical clotting tests.</p>
-          <ul><li>PT / INR, APTT, fibrinogen, D-dimer</li><li>ACT monitoring for cardiac and critical care</li><li>Reagents, controls and cuvettes</li></ul>
-          <div class="spec">Reported in · seconds, INR</div>
+        <article class="p-card">
+          <div class="p-img"><img src="https://images.unsplash.com/photo-1579154341184-22069e4614d2?auto=format&fit=crop&w=800&q=70" alt="Glass test tubes in a laboratory" loading="lazy"><span class="p-tag"><i style="background:#6AA3D6"></i>Citrate plasma</span></div>
+          <div class="p-body">
+            <h3>Coagulation Analyzers</h3>
+            <p>Semi-auto and automated systems for routine and pre-surgical clotting tests.</p>
+            <ul><li><svg><use href="#i-check"/></svg>PT / INR, APTT, fibrinogen, D-dimer</li><li><svg><use href="#i-check"/></svg>ACT monitoring for critical care</li><li><svg><use href="#i-check"/></svg>Reagents, controls and cuvettes</li></ul>
+            <a class="p-link" href="#contact">Enquire now <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+          </div>
         </article>
 
-        <article class="inst">
-          <span class="tube"><span class="cap" style="background:var(--cap-grey)"></span>Capillary · finger-prick</span>
-          <h3>Point-of-care testing</h3>
-          <p>Portable readers and rapid tests for clinics, collection centres, camps and emergency rooms.</p>
-          <ul><li>Immunofluorescence POC readers</li><li>HbA1c, CRP and cardiac markers</li><li>Paired with Blue Oak rapid cards</li></ul>
-          <div class="spec">Turnaround · minutes, at the bedside</div>
+        <article class="p-card">
+          <div class="p-img"><img src="https://images.unsplash.com/photo-1630959305790-4c956ce6c0b6?auto=format&fit=crop&w=800&q=70" alt="Laboratory professional using a microscope" loading="lazy"><span class="p-tag"><i style="background:#8C969E"></i>Capillary / slides</span></div>
+          <div class="p-body">
+            <h3>POCT &amp; Lab Equipment</h3>
+            <p>Point-of-care readers, microscopes, centrifuges and general lab equipment.</p>
+            <ul><li><svg><use href="#i-check"/></svg>HbA1c, CRP and cardiac POC readers</li><li><svg><use href="#i-check"/></svg>Microscopes and centrifuges</li><li><svg><use href="#i-check"/></svg>Paired with Blue Oak rapid tests</li></ul>
+            <a class="p-link" href="#contact">Enquire now <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+          </div>
         </article>
       </div>
     </div>
   </section>
 
-  <section id="reagents">
-    <div class="wrap own">
-      <div class="own-copy">
-        <span class="eyebrow">Blue Oak brand</span>
+  <section id="reagents" style="background:var(--tint)">
+    <div class="wrap split">
+      <div class="split-media">
+        <img src="https://images.unsplash.com/photo-1582719366950-f23838e207e7?auto=format&fit=crop&w=1000&q=70" alt="Reagent bottles on a laboratory shelf" loading="lazy">
+        <div class="badge"><b>Blue Oak brand</b><span>Reagents made for open-system analyzers</span></div>
+      </div>
+      <div class="split-copy">
+        <span class="kicker">Blue Oak Reagents</span>
         <h2>Our own reagents, rapid tests and consumables</h2>
-        <p class="lede">The products a lab reorders every month, made for open-system analyzers and priced for Indian labs. Order them with your instruments or on their own.</p>
-        <p class="note">For in-vitro diagnostic use only. Product licence: <span class="todo">add CDSCO licence / registration no.</span></p>
-        <div><a class="btn" href="#enquiry">Ask for the product list and prices</a></div>
-      </div>
-
-      <div class="catalog" role="list">
-        <div class="row" role="listitem"><span class="code">BO-CHEM</span><div><h3>Clinical chemistry reagents</h3><p>Liquid-stable kits for glucose, urea, creatinine, lipids, liver enzymes and more, with application sheets for common open analyzers.</p></div></div>
-        <div class="row" role="listitem"><span class="code">BO-QC</span><div><h3>Controls and calibrators</h3><p>Multi-level controls for biochemistry and hematology to support daily QC and NABL documentation.</p></div></div>
-        <div class="row" role="listitem"><span class="code">BO-RAPID</span><div><h3>Rapid card tests</h3><p>Lateral-flow cards for dengue NS1/IgG/IgM, malaria, typhoid, HBsAg, HCV and pregnancy.</p></div></div>
-        <div class="row" role="listitem"><span class="code">BO-HEME</span><div><h3>Hematology reagents</h3><p>Diluent, lyse and cleaner packs compatible with 3-part and 5-part cell counters.</p></div></div>
-        <div class="row" role="listitem"><span class="code">BO-LAB</span><div><h3>Lab consumables</h3><p>Vacuum collection tubes, sample cups, cuvettes, pipette tips, slides and urine containers.</p></div></div>
+        <p>The products your lab reorders every month, priced for Indian labs and delivered on schedule. Order them with your analyzer or on their own.</p>
+        <div class="range">
+          <div><h4>Clinical chemistry kits</h4><p>Liquid-stable reagents with application sheets for common open analyzers.</p></div>
+          <div><h4>Controls &amp; calibrators</h4><p>Multi-level controls for daily QC and NABL documentation.</p></div>
+          <div><h4>Rapid card tests</h4><p>Dengue, malaria, typhoid, HBsAg, HCV and pregnancy.</p></div>
+          <div><h4>Lab consumables</h4><p>Vacuum tubes, sample cups, cuvettes, tips, slides and containers.</p></div>
+        </div>
+        <p class="fine">For in-vitro diagnostic use. Licence no.: <span class="todo">add CDSCO licence / registration no.</span></p>
+        <div><a class="btn btn-primary" href="#contact">Request Product Catalogue</a></div>
       </div>
     </div>
   </section>
 
-  <section id="service" class="band">
+  <section id="why" class="why">
     <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow">Service &amp; AMC</span>
-        <h2>Engineers on call after the sale</h2>
-        <p class="lede">An analyzer that sits idle costs a lab every hour. Our service team handles the instrument from installation through its working life.</p>
+      <div class="sec-head center">
+        <span class="kicker">Why Blue Oak</span>
+        <h2>One partner for your entire lab</h2>
+        <p>Instruments, reagents and service from a single team means faster answers and one point of accountability.</p>
       </div>
-      <div class="svc">
-        <div><h3>Installation &amp; validation</h3><p>Site check, installation, calibration and a documented validation run before your first patient sample.</p></div>
-        <div><h3>Application training</h3><p>Hands-on training for technicians on running, QC, daily maintenance and troubleshooting.</p></div>
-        <div><h3>AMC and CMC contracts</h3><p>Scheduled preventive maintenance, with comprehensive cover that includes parts if you choose it.</p></div>
-        <div><h3>Breakdown support</h3><p>Phone and remote diagnosis first, then a field engineer visit. Response time agreed in your contract.</p></div>
-        <div><h3>Reagent rental plans</h3><p>Place an analyzer against an agreed monthly reagent volume, with little or no upfront instrument cost.</p></div>
-        <div><h3>Upgrades &amp; buy-back</h3><p>Move from semi-auto to fully automated systems, with an exchange offer on eligible older instruments.</p></div>
+      <div class="why-grid">
+        <div class="why-card"><span class="ic"><svg><use href="#i-shield"/></svg></span><h3>Genuine equipment</h3><p>Authorised products with manufacturer warranty and documentation.</p></div>
+        <div class="why-card"><span class="ic"><svg><use href="#i-users"/></svg></span><h3>Trained engineers</h3><p>Our own service team installs, calibrates and maintains every unit we sell.</p></div>
+        <div class="why-card"><span class="ic"><svg><use href="#i-grad"/></svg></span><h3>Application support</h3><p>Hands-on training for your technicians on running, QC and troubleshooting.</p></div>
+        <div class="why-card"><span class="ic"><svg><use href="#i-rupee"/></svg></span><h3>Lower cost per test</h3><p>Open-system analyzers and Blue Oak reagents keep running costs down.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="service" class="service">
+    <div class="wrap split">
+      <div class="split-copy">
+        <span class="kicker">Service &amp; AMC</span>
+        <h2>Engineers on call after the sale</h2>
+        <p>An idle analyzer costs your lab every hour. Our service team looks after your instruments from installation through their working life.</p>
+        <div class="svc-list">
+          <div><span class="ic"><svg><use href="#i-tool"/></svg></span><div><h4>Installation &amp; validation</h4><p>Site check, installation, calibration and a documented validation run.</p></div></div>
+          <div><span class="ic"><svg><use href="#i-cal"/></svg></span><div><h4>AMC &amp; CMC contracts</h4><p>Scheduled preventive maintenance, with parts cover if you choose it.</p></div></div>
+          <div><span class="ic"><svg><use href="#i-phone"/></svg></span><div><h4>Breakdown support</h4><p>Remote diagnosis first, then a field engineer visit within agreed times.</p></div></div>
+          <div><span class="ic"><svg><use href="#i-flask"/></svg></span><div><h4>Reagent rental plans</h4><p>Analyzer placed against a monthly reagent volume, little upfront cost.</p></div></div>
+          <div><span class="ic"><svg><use href="#i-grad"/></svg></span><div><h4>Operator training</h4><p>On-site training whenever new staff join your lab.</p></div></div>
+          <div><span class="ic"><svg><use href="#i-refresh"/></svg></span><div><h4>Upgrades &amp; buy-back</h4><p>Exchange offers when you move from semi-auto to fully automated.</p></div></div>
+        </div>
+      </div>
+      <div class="split-media">
+        <img src="https://images.unsplash.com/photo-1583911860205-72f8ac8ddcbe?auto=format&fit=crop&w=900&q=70" alt="Laboratory engineer working with equipment" loading="lazy">
+        <div class="badge"><b>AMC / CMC</b><span>Preventive maintenance on a fixed schedule</span></div>
       </div>
     </div>
   </section>
 
   <section>
     <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow">How it works</span>
-        <h2>From enquiry to first report</h2>
+      <div class="sec-head center">
+        <span class="kicker">How It Works</span>
+        <h2>From enquiry to your first report</h2>
       </div>
       <ol class="steps">
-        <li><h3>Tell us your workload</h3><p>Daily sample volume, test menu, space and budget.</p></li>
-        <li><h3>Demo and quote</h3><p>We suggest a configuration, arrange a demo and send a clear quote with running costs per test.</p></li>
-        <li><h3>Install and train</h3><p>Our engineer installs, validates and trains your team on site.</p></li>
-        <li><h3>Supply and service</h3><p>Regular reagent deliveries, preventive maintenance and a direct line to support.</p></li>
+        <li><h3>Share your needs</h3><p>Daily sample volume, test menu, space and budget.</p></li>
+        <li><h3>Demo &amp; quotation</h3><p>Recommended setup, live demo and a clear quote with cost per test.</p></li>
+        <li><h3>Install &amp; train</h3><p>Our engineer installs, validates and trains your team on site.</p></li>
+        <li><h3>Supply &amp; service</h3><p>Regular reagent supply, preventive maintenance and direct support.</p></li>
       </ol>
+    </div>
+  </section>
 
-      <div class="sec-head" style="margin-top:4rem;margin-bottom:1.25rem">
-        <span class="eyebrow">Who we work with</span>
-      </div>
-      <div class="serve">
-        <span>Pathology labs</span><span>Hospitals &amp; nursing homes</span><span>Diagnostic chains</span><span>Clinics &amp; polyclinics</span><span>Blood banks</span><span>Collection centres</span><span>Research &amp; teaching labs</span><span>Government tenders</span>
+  <section class="clients">
+    <div class="wrap">
+      <div class="sec-head center" style="margin-bottom:1.75rem"><span class="kicker">Who We Serve</span></div>
+      <div class="chips">
+        <span><svg><use href="#i-flask"/></svg>Pathology labs</span>
+        <span><svg><use href="#i-hosp"/></svg>Hospitals &amp; nursing homes</span>
+        <span><svg><use href="#i-users"/></svg>Diagnostic chains</span>
+        <span><svg><use href="#i-hosp"/></svg>Clinics &amp; polyclinics</span>
+        <span><svg><use href="#i-shield"/></svg>Blood banks</span>
+        <span><svg><use href="#i-pin"/></svg>Collection centres</span>
+        <span><svg><use href="#i-grad"/></svg>Research &amp; teaching labs</span>
       </div>
     </div>
   </section>
 
-  <section id="about" class="band">
-    <div class="wrap contact">
-      <div class="contact-info">
-        <span class="eyebrow">About Blue Oak</span>
-        <h2>Engineer-led, built around service</h2>
-        <p class="lede">Blue Oak Diagnostics was set up to give labs one dependable partner for instruments, the reagents that run on them, and the service that keeps them working. <span class="todo">Add founder name, year founded and service coverage area.</span></p>
-        <dl class="facts" id="enquiry">
-          <div><dt>Phone</dt><dd><span class="todo">+91 XXXXX XXXXX</span></dd></div>
-          <div><dt>Email</dt><dd>sales@blueoak.cloud</dd></div>
-          <div><dt>Office</dt><dd><span class="todo">Street, City, State, PIN</span></dd></div>
-          <div><dt>Hours</dt><dd>Mon to Sat, 9:30 am to 6:30 pm IST</dd></div>
-          <div><dt>GSTIN</dt><dd><span class="todo">Add GSTIN</span></dd></div>
-        </dl>
+  <div class="cta">
+    <div class="wrap">
+      <div><h2>Planning a new lab or upgrading an analyzer?</h2><p>Talk to an application specialist and get a configuration and quote within two working days.</p></div>
+      <a class="btn btn-white" href="#contact">Talk to Our Team <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div class="c-info">
+        <span class="kicker">Contact Us</span>
+        <h2>Get a quote or book a demo</h2>
+        <p>Tell us about your lab and we will recommend the right setup. <span class="todo">Add founder name, year founded and service coverage area.</span></p>
+        <div class="c-list">
+          <div><span class="ic"><svg><use href="#i-phone"/></svg></span><div><b>Phone / WhatsApp</b><span class="todo">+91 XXXXX XXXXX</span></div></div>
+          <div><span class="ic"><svg><use href="#i-mail"/></svg></span><div><b>Email</b><span>sales@blueoak.cloud</span></div></div>
+          <div><span class="ic"><svg><use href="#i-pin"/></svg></span><div><b>Office</b><span class="todo">Street, City, State, PIN</span></div></div>
+          <div><span class="ic"><svg><use href="#i-clock"/></svg></span><div><b>Working hours</b><span>Mon to Sat, 9:30 am to 6:30 pm IST</span></div></div>
+        </div>
       </div>
 
       <form id="enquiry-form" data-endpoint="" novalidate>
-        <div class="full"><h3>Send an enquiry</h3></div>
-        <label for="f-name">Your name<input id="f-name" name="name" required autocomplete="name"></label>
-        <label for="f-org">Lab or hospital<input id="f-org" name="organisation" required autocomplete="organization"></label>
-        <label for="f-phone">Mobile number<input id="f-phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel"></label>
+        <h3>Send an enquiry</h3>
+        <label for="f-name">Your name *<input id="f-name" name="name" required autocomplete="name"></label>
+        <label for="f-org">Lab / hospital name *<input id="f-org" name="organisation" required autocomplete="organization"></label>
+        <label for="f-phone">Mobile number *<input id="f-phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel"></label>
         <label for="f-city">City<input id="f-city" name="city" autocomplete="address-level2"></label>
-        <label for="f-interest" class="full">I'm interested in
+        <label for="f-interest" class="full">Product of interest
           <select id="f-interest" name="interest">
             <option>Biochemistry analyzer</option><option>Hematology analyzer</option><option>Electrolyte analyzer</option>
-            <option>Immunoassay / ELISA</option><option>Coagulation analyzer</option><option>Point-of-care / rapid tests</option>
-            <option>Blue Oak reagents &amp; consumables</option><option>Service / AMC for an existing analyzer</option><option>Something else</option>
+            <option>Immunoassay / ELISA</option><option>Coagulation analyzer</option><option>POCT / lab equipment</option>
+            <option>Blue Oak reagents &amp; consumables</option><option>Service / AMC for existing analyzer</option><option>Other</option>
           </select>
         </label>
-        <label for="f-msg" class="full">Details (sample volume, current setup, timeline)<textarea id="f-msg" name="message"></textarea></label>
-        <div class="full" style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
-          <button class="btn" type="submit">Send enquiry</button>
+        <label for="f-msg" class="full">Requirement details<textarea id="f-msg" name="message" placeholder="Daily sample volume, current setup, timeline"></textarea></label>
+        <div class="full form-foot">
+          <button class="btn btn-primary" type="submit">Submit Enquiry</button>
           <span class="form-status" id="form-status" role="status"></span>
         </div>
       </form>
@@ -375,27 +532,57 @@ footer .wrap{display:flex;gap:1rem 2rem;flex-wrap:wrap;justify-content:space-bet
 </main>
 
 <footer>
-  <div class="wrap">
-    <span>© <span id="yr">2026</span> Blue Oak Diagnostics · blueoak.cloud</span>
-    <span>Products listed are for in-vitro diagnostic use by trained professionals.</span>
+  <div class="wrap f-grid">
+    <div class="f-about">
+      <a class="logo" href="#top" aria-label="Blue Oak Diagnostics home">
+        <svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="10" fill="#12345E"/><path d="M24 9c-6.6 0-11 4.6-11 10.2 0 3.8 2 6.4 4.7 7.7-.3 1.5.5 2.9 2 3.2h2.3V39h4v-8.9h2.3c1.5-.3 2.3-1.7 2-3.2 2.7-1.3 4.7-3.9 4.7-7.7C35 13.6 30.6 9 24 9z" fill="#1663C7"/><circle cx="24" cy="19" r="3.2" fill="#13A3A9"/></svg>
+        <span class="logo-text"><b>Blue Oak</b><small>DIAGNOSTICS</small></span>
+      </a>
+      <p>Lab analyzers, Blue Oak reagents and engineer-led service for diagnostic laboratories across India.</p>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <ul><li><a href="#products">Biochemistry</a></li><li><a href="#products">Hematology</a></li><li><a href="#products">Electrolytes</a></li><li><a href="#products">Immunoassay &amp; ELISA</a></li><li><a href="#products">Coagulation</a></li></ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul><li><a href="#reagents">Blue Oak Reagents</a></li><li><a href="#service">Service &amp; AMC</a></li><li><a href="#why">Why Blue Oak</a></li><li><a href="#contact">Contact</a></li></ul>
+    </div>
+    <div>
+      <h4>Get in touch</h4>
+      <ul><li><span class="todo">+91 XXXXX XXXXX</span></li><li>sales@blueoak.cloud</li><li><span class="todo">City, State</span></li><li>GSTIN: <span class="todo">add GSTIN</span></li></ul>
+    </div>
+  </div>
+  <div class="wrap f-bottom">
+    <span>© <span id="yr">2026</span> Blue Oak Diagnostics. All rights reserved.</span>
+    <span>Products are for in-vitro diagnostic use by trained professionals.</span>
   </div>
 </footer>
 
 <script>
 (function(){
   document.getElementById('yr').textContent = new Date().getFullYear();
-  var form = document.getElementById('enquiry-form');
-  var status = document.getElementById('form-status');
+
+  var btn = document.getElementById('menu-btn'), nav = document.getElementById('nav');
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  nav.addEventListener('click', function(e){
+    if (e.target.closest('a')) { nav.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+  });
+
+  var form = document.getElementById('enquiry-form'), status = document.getElementById('form-status');
   form.addEventListener('submit', function(e){
     e.preventDefault();
     status.className = 'form-status';
     var missing = Array.prototype.filter.call(form.querySelectorAll('[required]'), function(el){ return !el.value.trim(); });
-    if (missing.length){ status.textContent = 'Please fill in your name, lab and mobile number.'; missing[0].focus(); return; }
+    if (missing.length){ status.textContent = 'Please fill in your name, lab name and mobile number.'; missing[0].focus(); return; }
     var endpoint = form.getAttribute('data-endpoint');
-    if (!endpoint){ status.textContent = 'Preview only: this form is not connected to an inbox yet.'; return; }
+    if (!endpoint){ status.textContent = 'This form is not connected yet. Please call or email us.'; return; }
     status.textContent = 'Sending…';
     fetch(endpoint, { method:'POST', headers:{'Accept':'application/json'}, body:new FormData(form) })
-      .then(function(r){ if(!r.ok) throw 0; form.reset(); status.className='form-status ok'; status.textContent='Thanks. Our team will call you within one working day.'; })
+      .then(function(r){ if(!r.ok) throw 0; form.reset(); status.className='form-status ok'; status.textContent='Thank you. Our team will call you within one working day.'; })
       .catch(function(){ status.textContent = 'Could not send. Please call or email us instead.'; });
   });
 })();
