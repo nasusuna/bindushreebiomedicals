@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Blue Oak Diagnostics</title>
+<meta name="description" content="Blue Oak Diagnostics supplies, installs and services clinical laboratory analyzers, and makes its own reagents, rapid tests and lab consumables for labs and hospitals across India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: lab-bench clarity. Ink-blue on cool paper; each instrument line is colour-coded by the blood-collection tube cap it runs on. */
+:root{
+  --bg:#F3F6F8;        /* cool lab paper */
+  --surface:#FFFFFF;
+  --ink:#10283A;       /* oak-blue ink */
+  --muted:#4F6272;
+  --line:#D5DEE5;
+  --accent:#1F5E8C;    /* Blue Oak */
+  --accent-ink:#FFFFFF;
+  --accent-soft:#E2EDF5;
+  --paper:#FBFCF7;     /* thermal printout */
+  --todo:#9A5B00;
+  --todo-bg:#FFF4DF;
+  /* tube cap colours */
+  --cap-gold:#D3A12A; --cap-lav:#8C7BC0; --cap-green:#3D9459; --cap-red:#C4473D; --cap-blue:#6AA3D6; --cap-grey:#8C969E;
+  --f-display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --f-body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Consolas,monospace;
+  --wrap:72rem;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0C1822;--surface:#122230;--ink:#E3ECF2;--muted:#9AAEBD;--line:#24394A;
+  --accent:#6FB1E3;--accent-ink:#0C1822;--accent-soft:#183247;--paper:#16283A;--todo:#F2B65A;--todo-bg:#33280F;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0C1822;--surface:#122230;--ink:#E3ECF2;--muted:#9AAEBD;--line:#24394A;
+  --accent:#6FB1E3;--accent-ink:#0C1822;--accent-soft:#183247;--paper:#16283A;--todo:#F2B65A;--todo-bg:#33280F;color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+[id]{scroll-margin-top:5.5rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--f-body);margin:0}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
+h1,h2,h3{font-family:var(--f-display);line-height:1.1;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.2rem,5.4vw,3.75rem);font-weight:700;letter-spacing:-.02em}
+h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:700;letter-spacing:-.01em}
+h3{font-size:1.2rem;font-weight:700}
+p{margin:0}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.eyebrow{font:600 .78rem/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.lede{color:var(--muted);font-size:1.15rem;max-width:38rem}
+.todo{color:var(--todo);background:var(--todo-bg);border:1px dashed var(--todo);border-radius:4px;padding:0 .3em;font-size:.92em}
+
+/* header */
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.site-head .wrap{display:flex;align-items:center;gap:1.5rem;min-height:4rem;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--ink);font:700 1.15rem var(--f-display)}
+.brand svg{flex:none}
+.nav{display:flex;gap:1.25rem;margin-left:auto;flex-wrap:wrap}
+.nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.98rem}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:var(--accent-ink);border:0;border-radius:6px;padding:.75rem 1.2rem;font:600 1rem var(--f-body);text-decoration:none;cursor:pointer}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+@media (max-width:760px){.nav{order:3;width:100%;margin-left:0;padding-bottom:.6rem;gap:1rem}.site-head .btn{margin-left:auto}}
+
+/* hero */
+.hero{padding-block:clamp(3rem,7vw,5.5rem)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.hero-copy{display:grid;gap:1.4rem;min-width:0}
+.hero-actions{display:flex;gap:.8rem;flex-wrap:wrap}
+.caps{display:flex;gap:.45rem;align-items:center;color:var(--muted);font:.85rem var(--f-mono);flex-wrap:wrap}
+.cap{width:.9rem;height:.9rem;border-radius:50% 50% 3px 3px;display:inline-block}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}}
+
+.printout{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:1.4rem 1.4rem 1.6rem;font:.85rem/1.7 var(--f-mono);box-shadow:0 18px 40px -24px rgba(16,40,58,.45);position:relative;min-width:0;
+  -webkit-mask:linear-gradient(#000 0 0) top/100% calc(100% - 10px) no-repeat, conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/14px 10px repeat-x;
+          mask:linear-gradient(#000 0 0) top/100% calc(100% - 10px) no-repeat, conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/14px 10px repeat-x}
+.printout .ph{text-align:center;font-weight:600;letter-spacing:.08em;border-bottom:1px dashed var(--muted);padding-bottom:.6rem;margin-bottom:.6rem}
+.printout dl{display:grid;grid-template-columns:1fr auto;gap:.15rem 1rem;margin:0;font-variant-numeric:tabular-nums}
+.printout dt{color:var(--muted)}
+.printout dd{margin:0;text-align:right}
+.printout .rule{grid-column:1/-1;border-top:1px dashed var(--muted);margin:.5rem 0}
+.printout .foot{margin-top:.7rem;color:var(--muted);font-size:.75rem;text-align:center}
+
+/* sections */
+section{padding-block:clamp(3.5rem,7vw,5.5rem)}
+.sec-head{display:grid;gap:.9rem;margin-bottom:2.5rem;max-width:44rem}
+.band{background:var(--surface);border-block:1px solid var(--line)}
+
+/* instrument grid */
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
+@media (max-width:980px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.grid{grid-template-columns:1fr}}
+.inst{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:1.5rem;display:grid;grid-template-rows:auto auto 1fr auto;gap:.8rem;min-width:0}
+.tube{display:flex;align-items:center;gap:.55rem;font:600 .74rem var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.tube .cap{width:1.1rem;height:1.1rem}
+.inst p{color:var(--muted)}
+.inst ul{margin:0;padding:0;list-style:none;display:grid;gap:.3rem;font-size:.95rem}
+.inst li{padding-left:1rem;position:relative}
+.inst li::before{content:"";position:absolute;left:0;top:.65em;width:.4rem;height:2px;background:var(--accent)}
+.spec{border-top:1px solid var(--line);padding-top:.75rem;font:.8rem var(--f-mono);color:var(--muted);font-variant-numeric:tabular-nums}
+
+/* own brand */
+.own{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,5vw,4rem);align-items:start}
+@media (max-width:860px){.own{grid-template-columns:1fr}}
+.own-copy{display:grid;gap:1.2rem;min-width:0}
+.catalog{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg);min-width:0}
+.catalog .row{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;padding:1.1rem 1.25rem;border-top:1px solid var(--line)}
+.catalog .row:first-child{border-top:0}
+.catalog .code{font:600 .8rem var(--f-mono);color:var(--accent);letter-spacing:.04em}
+.catalog h3{font-size:1.05rem;margin-bottom:.25rem}
+.catalog p{color:var(--muted);font-size:.95rem}
+@media (max-width:480px){.catalog .row{grid-template-columns:1fr;gap:.35rem}}
+.note{font-size:.9rem;color:var(--muted);border-left:3px solid var(--line);padding-left:.9rem}
+
+/* service */
+.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem 2.5rem}
+@media (max-width:860px){.svc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.svc{grid-template-columns:1fr}}
+.svc div{display:grid;gap:.45rem;align-content:start;border-top:2px solid var(--ink);padding-top:1rem}
+.svc p{color:var(--muted)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.25rem;counter-reset:s;list-style:none;margin:0;padding:0}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+.steps li{counter-increment:s;display:grid;gap:.5rem;align-content:start}
+.steps li::before{content:"Step " counter(s);font:600 .78rem var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.steps p{color:var(--muted)}
+
+/* serve */
+.serve{display:flex;flex-wrap:wrap;gap:.6rem}
+.serve span{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:.45rem .95rem;font-weight:600;font-size:.95rem}
+
+/* about + enquiry */
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,5vw,4rem)}
+@media (max-width:860px){.contact{grid-template-columns:1fr}}
+.contact-info{display:grid;gap:1.4rem;align-content:start;min-width:0}
+.facts{display:grid;gap:.8rem;margin:0}
+.facts div{display:grid;grid-template-columns:6.5rem 1fr;gap:.75rem}
+.facts dt{font:600 .78rem var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:.2rem}
+.facts dd{margin:0;min-width:0;overflow-wrap:anywhere}
+form{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:clamp(1.25rem,3vw,2rem);display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+form .full{grid-column:1/-1}
+@media (max-width:560px){form{grid-template-columns:1fr}}
+label{display:grid;gap:.35rem;font-weight:600;font-size:.92rem;min-width:0}
+input,select,textarea{font:400 1rem var(--f-body);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.7rem .8rem;width:100%}
+textarea{min-height:7rem;resize:vertical}
+.form-status{font-size:.95rem;color:var(--muted)}
+.form-status.ok{color:var(--accent);font-weight:600}
+
+footer{border-top:1px solid var(--line);padding-block:2rem;color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;gap:1rem 2rem;flex-wrap:wrap;justify-content:space-between}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Blue Oak Diagnostics home">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--accent)"/><path d="M16 6c-4.5 0-7.5 3.2-7.5 7 0 2.6 1.4 4.4 3.2 5.3-.2 1 .3 2 1.4 2.2h1.4V26h3v-5.5h1.4c1.1-.2 1.6-1.2 1.4-2.2 1.8-.9 3.2-2.7 3.2-5.3 0-3.8-3-7-7.5-7z" fill="var(--accent-ink)"/></svg>
+      Blue Oak Diagnostics
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#instruments">Instruments</a>
+      <a href="#reagents">Our reagents</a>
+      <a href="#service">Service &amp; AMC</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="btn" href="#enquiry">Request a quote</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="eyebrow">Clinical laboratory solutions · India</span>
+        <h1>Analyzers, reagents and the engineers who keep them running.</h1>
+        <p class="lede">Blue Oak Diagnostics supplies, installs and services lab instruments for pathology labs and hospitals, and makes its own reagents, rapid tests and consumables to run on them.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#enquiry">Talk to an application specialist</a>
+          <a class="btn ghost" href="#instruments">Browse instruments</a>
+        </div>
+        <div class="caps" aria-label="Sample types covered">
+          <span class="cap" style="background:var(--cap-gold)"></span>
+          <span class="cap" style="background:var(--cap-lav)"></span>
+          <span class="cap" style="background:var(--cap-green)"></span>
+          <span class="cap" style="background:var(--cap-red)"></span>
+          <span class="cap" style="background:var(--cap-blue)"></span>
+          <span>Every routine sample type, one supplier</span>
+        </div>
+      </div>
+
+      <aside class="printout" aria-label="Example lab setup">
+        <div class="ph">BLUE OAK · LAB SETUP SHEET</div>
+        <dl>
+          <dt>Profile</dt><dd>Mid-size path lab</dd>
+          <dt>Daily samples</dt><dd>~150</dd>
+          <div class="rule"></div>
+          <dt>Biochemistry</dt><dd>Fully automated</dd>
+          <dt>Hematology</dt><dd>5-part CBC</dd>
+          <dt>Electrolytes</dt><dd>ISE Na/K/Cl</dd>
+          <dt>Hormones</dt><dd>CLIA, benchtop</dd>
+          <dt>Coagulation</dt><dd>PT / APTT</dd>
+          <div class="rule"></div>
+          <dt>Install + training</dt><dd>Included</dd>
+          <dt>Reagents</dt><dd>Monthly supply</dd>
+          <dt>Service</dt><dd>AMC / CMC</dd>
+        </dl>
+        <div class="foot">Example configuration · yours is planned with you</div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="instruments" class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Instruments</span>
+        <h2>Lab analyzers we supply, install and service</h2>
+        <p class="lede">We are authorised sales and service partners for established analyzer manufacturers. Each line below is matched to the sample it runs on, so you can see the whole bench at a glance.</p>
+      </div>
+
+      <div class="grid">
+        <article class="inst">
+          <span class="tube"><span class="cap" style="background:var(--cap-gold)"></span>Serum · SST gold top</span>
+          <h3>Biochemistry analyzers</h3>
+          <p>From semi-automated photometers for small labs to fully automated random-access systems for high sample loads.</p>
+          <ul><li>Semi-auto and fully auto models</li><li>LFT, KFT, lipid, glucose and special chemistry</li><li>Open systems that run Blue Oak reagents</li></ul>
+          <div class="spec">Throughput options · 100 to 400+ tests/hr</div>
+        </article>
+
+        <article class="inst">
+          <span class="tube"><span class="cap" style="background:var(--cap-lav)"></span>Whole blood · EDTA lavender top</span>
+          <h3>Hematology analyzers</h3>
+          <p>Compact cell counters for complete blood counts, sized for clinics through to hospital labs.</p>
+          <ul><li>3-part and 5-part differential</li><li>Small sample volume, results in about a minute</li><li>Matching diluents, lyse and controls</li></ul>
+          <div class="spec">Parameters · 19 to 29+ by model</div>
+        </article>
+
+        <article class="inst">
+          <span class="tube"><span class="cap" style="background:var(--cap-green)"></span>Plasma · Li-heparin green top</span>
+          <h3>Electrolyte analyzers</h3>
+          <p>Ion-selective electrode analyzers for fast sodium, potassium and chloride results with low cost per test.</p>
+          <ul><li>Na⁺, K⁺, Cl⁻, with iCa²⁺ and Li⁺ options</li><li>Touch screen, barcode reader, data export</li><li>Electrodes, reagent packs and service</li></ul>
+          <div class="spec">Reported in · mmol/L</div>
+        </article>
+
+        <article class="inst">
+          <span class="tube"><span class="cap" style="background:var(--cap-red)"></span>Serum · plain red top</span>
+          <h3>Immunoassay &amp; ELISA</h3>
+          <p>Benchtop CLIA and fluorescence analyzers for hormones and markers, plus ELISA readers and plate washers.</p>
+          <ul><li>Thyroid, fertility, cardiac and infection panels</li><li>Compact CLIA for labs moving off manual ELISA</li><li>ELISA reader and washer pairs</li></ul>
+          <div class="spec">Common units · µIU/mL, ng/mL, pg/mL</div>
+        </article>
+
+        <article class="inst">
+          <span class="tube"><span class="cap" style="background:var(--cap-blue)"></span>Plasma · Na-citrate light blue top</span>
+          <h3>Coagulation analyzers</h3>
+          <p>Semi-automated and automated coagulation systems for routine and pre-surgical clotting tests.</p>
+          <ul><li>PT / INR, APTT, fibrinogen, D-dimer</li><li>ACT monitoring for cardiac and critical care</li><li>Reagents, controls and cuvettes</li></ul>
+          <div class="spec">Reported in · seconds, INR</div>
+        </article>
+
+        <article class="inst">
+          <span class="tube"><span class="cap" style="background:var(--cap-grey)"></span>Capillary · finger-prick</span>
+          <h3>Point-of-care testing</h3>
+          <p>Portable readers and rapid tests for clinics, collection centres, camps and emergency rooms.</p>
+          <ul><li>Immunofluorescence POC readers</li><li>HbA1c, CRP and cardiac markers</li><li>Paired with Blue Oak rapid cards</li></ul>
+          <div class="spec">Turnaround · minutes, at the bedside</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="reagents">
+    <div class="wrap own">
+      <div class="own-copy">
+        <span class="eyebrow">Blue Oak brand</span>
+        <h2>Our own reagents, rapid tests and consumables</h2>
+        <p class="lede">The products a lab reorders every month, made for open-system analyzers and priced for Indian labs. Order them with your instruments or on their own.</p>
+        <p class="note">For in-vitro diagnostic use only. Product licence: <span class="todo">add CDSCO licence / registration no.</span></p>
+        <div><a class="btn" href="#enquiry">Ask for the product list and prices</a></div>
+      </div>
+
+      <div class="catalog" role="list">
+        <div class="row" role="listitem"><span class="code">BO-CHEM</span><div><h3>Clinical chemistry reagents</h3><p>Liquid-stable kits for glucose, urea, creatinine, lipids, liver enzymes and more, with application sheets for common open analyzers.</p></div></div>
+        <div class="row" role="listitem"><span class="code">BO-QC</span><div><h3>Controls and calibrators</h3><p>Multi-level controls for biochemistry and hematology to support daily QC and NABL documentation.</p></div></div>
+        <div class="row" role="listitem"><span class="code">BO-RAPID</span><div><h3>Rapid card tests</h3><p>Lateral-flow cards for dengue NS1/IgG/IgM, malaria, typhoid, HBsAg, HCV and pregnancy.</p></div></div>
+        <div class="row" role="listitem"><span class="code">BO-HEME</span><div><h3>Hematology reagents</h3><p>Diluent, lyse and cleaner packs compatible with 3-part and 5-part cell counters.</p></div></div>
+        <div class="row" role="listitem"><span class="code">BO-LAB</span><div><h3>Lab consumables</h3><p>Vacuum collection tubes, sample cups, cuvettes, pipette tips, slides and urine containers.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="service" class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Service &amp; AMC</span>
+        <h2>Engineers on call after the sale</h2>
+        <p class="lede">An analyzer that sits idle costs a lab every hour. Our service team handles the instrument from installation through its working life.</p>
+      </div>
+      <div class="svc">
+        <div><h3>Installation &amp; validation</h3><p>Site check, installation, calibration and a documented validation run before your first patient sample.</p></div>
+        <div><h3>Application training</h3><p>Hands-on training for technicians on running, QC, daily maintenance and troubleshooting.</p></div>
+        <div><h3>AMC and CMC contracts</h3><p>Scheduled preventive maintenance, with comprehensive cover that includes parts if you choose it.</p></div>
+        <div><h3>Breakdown support</h3><p>Phone and remote diagnosis first, then a field engineer visit. Response time agreed in your contract.</p></div>
+        <div><h3>Reagent rental plans</h3><p>Place an analyzer against an agreed monthly reagent volume, with little or no upfront instrument cost.</p></div>
+        <div><h3>Upgrades &amp; buy-back</h3><p>Move from semi-auto to fully automated systems, with an exchange offer on eligible older instruments.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">How it works</span>
+        <h2>From enquiry to first report</h2>
+      </div>
+      <ol class="steps">
+        <li><h3>Tell us your workload</h3><p>Daily sample volume, test menu, space and budget.</p></li>
+        <li><h3>Demo and quote</h3><p>We suggest a configuration, arrange a demo and send a clear quote with running costs per test.</p></li>
+        <li><h3>Install and train</h3><p>Our engineer installs, validates and trains your team on site.</p></li>
+        <li><h3>Supply and service</h3><p>Regular reagent deliveries, preventive maintenance and a direct line to support.</p></li>
+      </ol>
+
+      <div class="sec-head" style="margin-top:4rem;margin-bottom:1.25rem">
+        <span class="eyebrow">Who we work with</span>
+      </div>
+      <div class="serve">
+        <span>Pathology labs</span><span>Hospitals &amp; nursing homes</span><span>Diagnostic chains</span><span>Clinics &amp; polyclinics</span><span>Blood banks</span><span>Collection centres</span><span>Research &amp; teaching labs</span><span>Government tenders</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="band">
+    <div class="wrap contact">
+      <div class="contact-info">
+        <span class="eyebrow">About Blue Oak</span>
+        <h2>Engineer-led, built around service</h2>
+        <p class="lede">Blue Oak Diagnostics was set up to give labs one dependable partner for instruments, the reagents that run on them, and the service that keeps them working. <span class="todo">Add founder name, year founded and service coverage area.</span></p>
+        <dl class="facts" id="enquiry">
+          <div><dt>Phone</dt><dd><span class="todo">+91 XXXXX XXXXX</span></dd></div>
+          <div><dt>Email</dt><dd>sales@blueoak.cloud</dd></div>
+          <div><dt>Office</dt><dd><span class="todo">Street, City, State, PIN</span></dd></div>
+          <div><dt>Hours</dt><dd>Mon to Sat, 9:30 am to 6:30 pm IST</dd></div>
+          <div><dt>GSTIN</dt><dd><span class="todo">Add GSTIN</span></dd></div>
+        </dl>
+      </div>
+
+      <form id="enquiry-form" data-endpoint="" novalidate>
+        <div class="full"><h3>Send an enquiry</h3></div>
+        <label for="f-name">Your name<input id="f-name" name="name" required autocomplete="name"></label>
+        <label for="f-org">Lab or hospital<input id="f-org" name="organisation" required autocomplete="organization"></label>
+        <label for="f-phone">Mobile number<input id="f-phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel"></label>
+        <label for="f-city">City<input id="f-city" name="city" autocomplete="address-level2"></label>
+        <label for="f-interest" class="full">I'm interested in
+          <select id="f-interest" name="interest">
+            <option>Biochemistry analyzer</option><option>Hematology analyzer</option><option>Electrolyte analyzer</option>
+            <option>Immunoassay / ELISA</option><option>Coagulation analyzer</option><option>Point-of-care / rapid tests</option>
+            <option>Blue Oak reagents &amp; consumables</option><option>Service / AMC for an existing analyzer</option><option>Something else</option>
+          </select>
+        </label>
+        <label for="f-msg" class="full">Details (sample volume, current setup, timeline)<textarea id="f-msg" name="message"></textarea></label>
+        <div class="full" style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
+          <button class="btn" type="submit">Send enquiry</button>
+          <span class="form-status" id="form-status" role="status"></span>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Blue Oak Diagnostics · blueoak.cloud</span>
+    <span>Products listed are for in-vitro diagnostic use by trained professionals.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  var form = document.getElementById('enquiry-form');
+  var status = document.getElementById('form-status');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    status.className = 'form-status';
+    var missing = Array.prototype.filter.call(form.querySelectorAll('[required]'), function(el){ return !el.value.trim(); });
+    if (missing.length){ status.textContent = 'Please fill in your name, lab and mobile number.'; missing[0].focus(); return; }
+    var endpoint = form.getAttribute('data-endpoint');
+    if (!endpoint){ status.textContent = 'Preview only: this form is not connected to an inbox yet.'; return; }
+    status.textContent = 'Sending…';
+    fetch(endpoint, { method:'POST', headers:{'Accept':'application/json'}, body:new FormData(form) })
+      .then(function(r){ if(!r.ok) throw 0; form.reset(); status.className='form-status ok'; status.textContent='Thanks. Our team will call you within one working day.'; })
+      .catch(function(){ status.textContent = 'Could not send. Please call or email us instead.'; });
+  });
+})();
+</script>
+</body>
+</html>
