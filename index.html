@@ -135,13 +135,6 @@ section{padding-block:clamp(3.5rem,8vw,6rem)}
 .p-body li svg{width:16px;height:16px;stroke:var(--teal);flex:none;margin-top:.3rem}
 .p-link{margin-top:auto;padding-top:.6rem;font:700 .95rem var(--f-head);color:var(--blue);text-decoration:none;display:inline-flex;align-items:center;gap:.4rem}
 .p-link:hover{gap:.7rem}
-.p-dl{display:flex;align-items:center;justify-content:center;gap:.55rem;width:100%;font:800 1rem var(--f-head);color:var(--white);text-decoration:none;background:var(--teal);border-radius:8px;padding:.8rem 1rem;box-shadow:0 4px 12px rgba(19,163,169,.3);transition:background .2s,transform .2s;white-space:nowrap}
-.p-dl:hover{background:#0F8A8F;transform:translateY(-1px)}
-.p-dl svg{width:20px;height:20px;stroke:currentColor;flex:none}
-.p-dl small{font-weight:700;font-size:.75rem;letter-spacing:.06em;background:rgba(255,255,255,.2);border-radius:4px;padding:.15rem .4rem}
-.p-dl + .p-link,.p-dls + .p-link{margin-top:.2rem}
-.p-dls{display:grid;gap:.5rem}
-.p-dls>span{font:700 .78rem var(--f-head);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 
 /* split sections */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
@@ -293,7 +286,6 @@ footer{background:#071A31;color:#9FB1C7;font-size:.95rem}
     <symbol id="i-grad" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></symbol>
     <symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.5 9a9 9 0 0 1 14.9-3.4L23 10M1 14l4.6 4.4A9 9 0 0 0 20.5 15"/></symbol>
     <symbol id="i-hosp" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 8v8M8 12h8"/></symbol>
-    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
     <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91A9.85 9.85 0 0 0 12.04 2zm0 18.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29z"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
   </defs>
@@ -378,7 +370,6 @@ footer{background:#071A31;color:#9FB1C7;font-size:.95rem}
             <h3>Biochemistry Analyzers</h3>
             <p>Semi-automated and fully automated systems for routine and special chemistry.</p>
             <ul><li><svg><use href="#i-check"/></svg>LFT, KFT, lipid profile, glucose</li><li><svg><use href="#i-check"/></svg>100 to 400+ tests per hour options</li><li><svg><use href="#i-check"/></svg>Open systems for Bindushree reagents</li></ul>
-            <a class="p-dl" href="brochures/chem-smart-pro-brochure.pdf" title="Chem Smart Pro brochure (PDF, 0.5 MB)" download target="_blank" rel="noopener"><svg><use href="#i-download"/></svg>Download Brochure <small>PDF</small></a>
             <a class="p-link" href="#contact">Enquire now <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
           </div>
         </article>
@@ -389,7 +380,6 @@ footer{background:#071A31;color:#9FB1C7;font-size:.95rem}
             <h3>Hematology Analyzers</h3>
             <p>Compact cell counters for fast, accurate complete blood counts.</p>
             <ul><li><svg><use href="#i-check"/></svg>3-part and 5-part differential</li><li><svg><use href="#i-check"/></svg>Results in about a minute</li><li><svg><use href="#i-check"/></svg>Matching diluent, lyse and controls</li></ul>
-            <div class="p-dls"><span>Download brochures</span><a class="p-dl" href="brochures/zentronics-3-part-hematology-brochure.pdf" title="Zentronics 3-Part Hematology Analyzer brochure (PDF)" download target="_blank" rel="noopener"><svg><use href="#i-download"/></svg>Zentronics 3-Part <small>PDF</small></a><a class="p-dl" href="brochures/vanalyze-v30s-brochure.pdf" title="Vanalyze V30s brochure (PDF, 1.5 MB)" download target="_blank" rel="noopener"><svg><use href="#i-download"/></svg>Vanalyze V30s <small>PDF</small></a><a class="p-dl" href="brochures/vanalyze-v30-pro-brochure.pdf" title="Vanalyze V30 Pro brochure (PDF)" download target="_blank" rel="noopener"><svg><use href="#i-download"/></svg>Vanalyze V30 Pro <small>PDF</small></a></div>
             <a class="p-link" href="#contact">Enquire now <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
           </div>
         </article>
@@ -430,7 +420,6 @@ footer{background:#071A31;color:#9FB1C7;font-size:.95rem}
             <h3>POCT &amp; Lab Equipment</h3>
             <p>Point-of-care readers and general lab equipment for clinics and small labs.</p>
             <ul><li><svg><use href="#i-check"/></svg>HbA1c, CRP and cardiac POC readers</li><li><svg><use href="#i-check"/></svg>Paired with Bindushree rapid tests</li></ul>
-            <a class="p-dl" href="brochures/finecare-fia-meter-plus-brochure.pdf" title="Finecare FIA Meter Plus brochure (PDF)" download target="_blank" rel="noopener"><svg><use href="#i-download"/></svg>Download Brochure <small>PDF</small></a>
             <a class="p-link" href="#contact">Enquire now <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
           </div>
         </article>

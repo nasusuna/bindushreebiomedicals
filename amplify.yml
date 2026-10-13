@@ -8,6 +8,5 @@ frontend:
     baseDirectory: /
     files:
       - index.html
-      - 'brochures/**/*'
   cache:
     paths: []
