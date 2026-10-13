@@ -191,6 +191,12 @@ section{padding-block:clamp(3.5rem,8vw,6rem)}
 .wa svg{width:15px;height:15px;stroke:none!important;fill:currentColor;flex:none}
 .c-list a[href^="tel:"]{white-space:nowrap}
 .c-list b{margin-bottom:.2rem}
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.25);transition:transform .2s,background .2s}
+.wa-float:hover{background:#1DA851;transform:scale(1.07)}
+.wa-float svg{width:32px;height:32px;fill:currentColor}
+.wa-float::after{content:"Chat with us";position:absolute;right:70px;top:50%;transform:translateY(-50%);background:var(--navy);color:#fff;font:600 .85rem var(--f-head);padding:.4rem .7rem;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s}
+.wa-float:hover::after{opacity:1}
+@media (max-width:600px){.wa-float{right:14px;bottom:14px;width:54px;height:54px}}
 
 /* service band */
 .service{background:var(--navy);color:#D2DEEC}
@@ -638,6 +644,8 @@ footer{background:#071A31;color:#9FB1C7;font-size:.95rem}
     <span>Products are for in-vitro diagnostic use by trained professionals.</span>
   </div>
 </footer>
+
+<a class="wa-float" href="https://wa.me/919964390305?text=Hi%20Bindushree%20Biomedicals%2C%20I%27d%20like%20to%20enquire%20about%20" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg></a>
 
 <script>
 (function(){
