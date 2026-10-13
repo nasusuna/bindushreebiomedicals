@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Bindushree Biomedicals | Lab Analyzers, Reagents & Service in India</title>
-<meta name="description" content="Bindushree Biomedicals supplies, installs and services biochemistry, hematology, electrolyte, immunoassay and coagulation analyzers, and makes Bindushree reagents, rapid tests and lab consumables for labs and hospitals across India.">
+<title>Bindushree Biomedicals | Lab Analyzers, Reagents & Service in Bangalore, Karnataka</title>
+<meta name="description" content="Bindushree Biomedicals supplies, installs and services biochemistry, hematology, electrolyte, immunoassay and coagulation analyzers, and makes Bindushree reagents, rapid tests and lab consumables for labs and hospitals across Karnataka.">
 <meta property="og:title" content="Bindushree Biomedicals">
 <meta property="og:description" content="Lab analyzers, reagents and service engineers for pathology labs and hospitals in India.">
 <meta property="og:image" content="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1200&q=70">
@@ -80,11 +80,11 @@ section{padding-block:clamp(3.5rem,8vw,6rem)}
 .logo-text b{font:800 1.3rem var(--f-head);color:var(--navy);letter-spacing:-.01em}
 .logo-text small{font:700 .66rem var(--f-head);letter-spacing:.32em;color:var(--blue);margin-top:.3rem}
 .nav{margin-left:auto;display:flex;align-items:center;gap:1.75rem}
-.nav a{font:600 .98rem var(--f-head);color:var(--ink);text-decoration:none;padding-block:.4rem;border-bottom:2px solid transparent}
+.nav a{font:600 .98rem var(--f-head);color:var(--ink);text-decoration:none;padding-block:.4rem;border-bottom:2px solid transparent;white-space:nowrap}
 .nav a:hover{color:var(--blue);border-color:var(--blue)}
 .menu-btn{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:6px;padding:.5rem;cursor:pointer}
 .menu-btn svg{width:24px;height:24px;stroke:var(--navy)}
-@media (max-width:960px){
+@media (max-width:1140px){
   .menu-btn{display:inline-flex}
   .nav{position:absolute;left:0;right:0;top:100%;background:var(--white);flex-direction:column;align-items:stretch;gap:0;padding:.5rem clamp(1rem,4vw,2rem) 1rem;box-shadow:var(--shadow)}
   .nav a{padding:.8rem 0;border-bottom:1px solid var(--line)}
@@ -163,6 +163,14 @@ section{padding-block:clamp(3.5rem,8vw,6rem)}
 .why-card .ic{width:52px;height:52px;border-radius:50%;background:var(--tint);display:grid;place-items:center}
 .why-card .ic svg{width:26px;height:26px;stroke:var(--blue)}
 .why-card p{color:var(--muted);font-size:.97rem}
+
+/* story */
+.story-quote{margin:0;border-left:3px solid var(--teal);padding:.4rem 0 .4rem 1.25rem;font:600 1.12rem/1.55 var(--f-head);color:var(--navy)}
+.story-quote cite{display:block;margin-top:.6rem;font:600 .9rem var(--f-body);font-style:normal;color:var(--muted)}
+.story-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;border-top:1px solid var(--line);padding-top:1.25rem}
+.story-stats b{display:block;font:800 1.5rem var(--f-head);color:var(--blue)}
+.story-stats span{font-size:.9rem;color:var(--muted);line-height:1.4;display:block}
+@media (max-width:520px){.story-stats{grid-template-columns:1fr}}
 
 /* service band */
 .service{background:var(--navy);color:#D2DEEC}
@@ -289,6 +297,7 @@ footer{background:#071A31;color:#9FB1C7;font-size:.95rem}
       <a href="#reagents">Bindushree Reagents</a>
       <a href="#service">Service &amp; AMC</a>
       <a href="#why">Why Bindushree</a>
+      <a href="#about">About</a>
       <a href="#contact">Contact</a>
       <a class="btn btn-primary" href="#contact">Get a Quote</a>
     </nav>
@@ -455,6 +464,27 @@ footer{background:#071A31;color:#9FB1C7;font-size:.95rem}
     </div>
   </section>
 
+  <section id="about">
+    <div class="wrap split">
+      <div class="split-media">
+        <img src="https://images.unsplash.com/photo-1614308459036-779d0dfe51ff?auto=format&fit=crop&w=1000&q=70" alt="Technician adjusting the focus of a laboratory microscope" loading="lazy">
+        <div class="badge"><b>Since 2010</b><span>Serving diagnostic labs across Karnataka</span></div>
+      </div>
+      <div class="split-copy">
+        <span class="kicker">Our Story</span>
+        <h2>Built in Bangalore, for the labs of Karnataka</h2>
+        <p>Mutturaj founded Bindushree Biomedicals in 2010 with one belief: a diagnostic lab is only as dependable as the support behind its instruments. When an analyzer stops or reagents run short, it is patients who wait for their reports.</p>
+        <p>So he built the company around a simple promise. Recommend the right analyzer for each lab&rsquo;s volume and budget, keep reagents arriving on time, and send an engineer who knows the machine when something goes wrong. From an office in Bangalore, Bindushree has grown with the labs it serves, from small clinics and collection centres to busy hospital laboratories across the state.</p>
+        <blockquote class="story-quote">&ldquo;Behind every lab report is a patient waiting for an answer. Our job is to make sure the machine producing it never lets them down.&rdquo;<cite>Mutturaj, Founder</cite></blockquote>
+        <div class="story-stats">
+          <div><b>2010</b><span>Founded in Bangalore</span></div>
+          <div><b>15+ years</b><span>Supporting diagnostic labs</span></div>
+          <div><b>Karnataka</b><span>Statewide sales and service</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="service" class="service">
     <div class="wrap split">
       <div class="split-copy">
@@ -519,7 +549,7 @@ footer{background:#071A31;color:#9FB1C7;font-size:.95rem}
       <div class="c-info">
         <span class="kicker">Contact Us</span>
         <h2>Get a quote or book a demo</h2>
-        <p>Tell us about your lab and we will recommend the right setup. <span class="todo">Add founder name, year founded and service coverage area.</span></p>
+        <p>Tell us about your lab and we will recommend the right setup. Founded by Mutturaj in 2010, we supply and service diagnostic labs and hospitals across Karnataka.</p>
         <div class="c-list">
           <div><span class="ic"><svg><use href="#i-phone"/></svg></span><div><b>Phone / WhatsApp</b><span><a href="tel:+919964390305">+91 99643 90305</a><br><a href="tel:+919611640960">+91 96116 40960</a></span></div></div>
           <div><span class="ic"><svg><use href="#i-mail"/></svg></span><div><b>Email</b><span><a href="mailto:bindushreebiomedicals@gmail.com">bindushreebiomedicals@gmail.com</a></span></div></div>
@@ -558,7 +588,7 @@ footer{background:#071A31;color:#9FB1C7;font-size:.95rem}
         <svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="10" fill="#12345E"/><path d="M24 9c-6.6 0-11 4.6-11 10.2 0 3.8 2 6.4 4.7 7.7-.3 1.5.5 2.9 2 3.2h2.3V39h4v-8.9h2.3c1.5-.3 2.3-1.7 2-3.2 2.7-1.3 4.7-3.9 4.7-7.7C35 13.6 30.6 9 24 9z" fill="#1663C7"/><circle cx="24" cy="19" r="3.2" fill="#13A3A9"/></svg>
         <span class="logo-text"><b>Bindushree</b><small>BIOMEDICALS</small></span>
       </a>
-      <p>Lab analyzers, Bindushree reagents and engineer-led service for diagnostic laboratories across India.</p>
+      <p>Lab analyzers, Bindushree reagents and engineer-led service for diagnostic laboratories across Karnataka since 2010.</p>
     </div>
     <div>
       <h4>Products</h4>
@@ -566,7 +596,7 @@ footer{background:#071A31;color:#9FB1C7;font-size:.95rem}
     </div>
     <div>
       <h4>Company</h4>
-      <ul><li><a href="#reagents">Bindushree Reagents</a></li><li><a href="#service">Service &amp; AMC</a></li><li><a href="#why">Why Bindushree</a></li><li><a href="#contact">Contact</a></li></ul>
+      <ul><li><a href="#reagents">Bindushree Reagents</a></li><li><a href="#service">Service &amp; AMC</a></li><li><a href="#why">Why Bindushree</a></li><li><a href="#about">Our Story</a></li><li><a href="#contact">Contact</a></li></ul>
     </div>
     <div>
       <h4>Get in touch</h4>
