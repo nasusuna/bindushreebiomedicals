@@ -171,6 +171,12 @@ section{padding-block:clamp(3.5rem,8vw,6rem)}
 .story-stats b{display:block;font:800 1.5rem var(--f-head);color:var(--blue)}
 .story-stats span{font-size:.9rem;color:var(--muted);line-height:1.4;display:block}
 @media (max-width:520px){.story-stats{grid-template-columns:1fr}}
+.refer{display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:start;background:var(--tint);border:1px solid var(--line);border-radius:10px;padding:1.25rem 1.3rem}
+.refer .ic{width:46px;height:46px;border-radius:50%;background:var(--white);display:grid;place-items:center}
+.refer .ic svg{width:24px;height:24px;stroke:var(--teal)}
+.refer h4{font-size:1.05rem;margin-bottom:.25rem}
+.refer p{font-size:.95rem;color:var(--muted);line-height:1.5}
+.refer a{font:700 .95rem var(--f-head);color:var(--blue);text-decoration:none;display:inline-flex;align-items:center;gap:.35rem;margin-top:.5rem}
 
 /* service band */
 .service{background:var(--navy);color:#D2DEEC}
@@ -475,11 +481,16 @@ footer{background:#071A31;color:#9FB1C7;font-size:.95rem}
         <h2>Built in Bangalore, for the labs of Karnataka</h2>
         <p>Mutturaj founded Bindushree Biomedicals in 2010 with one belief: a diagnostic lab is only as dependable as the support behind its instruments. When an analyzer stops or reagents run short, it is patients who wait for their reports.</p>
         <p>So he built the company around a simple promise. Recommend the right analyzer for each lab&rsquo;s volume and budget, keep reagents arriving on time, and send an engineer who knows the machine when something goes wrong. From an office in Bangalore, Bindushree has grown with the labs it serves, from small clinics and collection centres to busy hospital laboratories across the state.</p>
+        <p>Today we look after more than 100 clients, and most of our new business comes from referrals rather than direct sales. When labs recommend us to other labs, we know the service is doing its job.</p>
         <blockquote class="story-quote">&ldquo;Behind every lab report is a patient waiting for an answer. Our job is to make sure the machine producing it never lets them down.&rdquo;<cite>Mutturaj, Founder</cite></blockquote>
         <div class="story-stats">
-          <div><b>2010</b><span>Founded in Bangalore</span></div>
+          <div><b>100+</b><span>Clients served</span></div>
           <div><b>15+ years</b><span>Supporting diagnostic labs</span></div>
           <div><b>Karnataka</b><span>Statewide sales and service</span></div>
+        </div>
+        <div class="refer">
+          <span class="ic"><svg><use href="#i-users"/></svg></span>
+          <div><h4>Refer a lab, get rewarded</h4><p>Know a lab, clinic or hospital that needs an analyzer, reagents or service? Introduce them to us. Every new referral is rewarded as our thank-you.</p><a href="#contact">Refer a lab <svg width="16" height="16"><use href="#i-arrow"/></svg></a></div>
         </div>
       </div>
     </div>
@@ -568,7 +579,7 @@ footer{background:#071A31;color:#9FB1C7;font-size:.95rem}
           <select id="f-interest" name="interest">
             <option>Biochemistry analyzer</option><option>Hematology analyzer</option><option>Electrolyte analyzer</option>
             <option>Immunoassay / ELISA</option><option>Coagulation analyzer</option><option>POCT / lab equipment</option>
-            <option>Bindushree reagents &amp; consumables</option><option>Service / AMC for existing analyzer</option><option>Other</option>
+            <option>Bindushree reagents &amp; consumables</option><option>Service / AMC for existing analyzer</option><option>Refer a lab (referral reward)</option><option>Other</option>
           </select>
         </label>
         <label for="f-msg" class="full">Requirement details<textarea id="f-msg" name="message" placeholder="Daily sample volume, current setup, timeline"></textarea></label>
