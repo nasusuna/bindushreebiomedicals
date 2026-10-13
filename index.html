@@ -139,7 +139,9 @@ section{padding-block:clamp(3.5rem,8vw,6rem)}
 .p-dl:hover{background:#0F8A8F;transform:translateY(-1px)}
 .p-dl svg{width:20px;height:20px;stroke:currentColor;flex:none}
 .p-dl small{font-weight:700;font-size:.75rem;letter-spacing:.06em;background:rgba(255,255,255,.2);border-radius:4px;padding:.15rem .4rem}
-.p-dl + .p-link{margin-top:.2rem}
+.p-dl + .p-link,.p-dls + .p-link{margin-top:.2rem}
+.p-dls{display:grid;gap:.5rem}
+.p-dls>span{font:700 .78rem var(--f-head);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 
 /* split sections */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
@@ -373,6 +375,7 @@ footer{background:#071A31;color:#9FB1C7;font-size:.95rem}
             <h3>Hematology Analyzers</h3>
             <p>Compact cell counters for fast, accurate complete blood counts.</p>
             <ul><li><svg><use href="#i-check"/></svg>3-part and 5-part differential</li><li><svg><use href="#i-check"/></svg>Results in about a minute</li><li><svg><use href="#i-check"/></svg>Matching diluent, lyse and controls</li></ul>
+            <div class="p-dls"><span>Download brochures</span><a class="p-dl" href="brochures/zentronics-3-part-hematology-brochure.pdf" title="Zentronics 3-Part Hematology Analyzer brochure (PDF)" download target="_blank" rel="noopener"><svg><use href="#i-download"/></svg>Zentronics 3-Part <small>PDF</small></a><a class="p-dl" href="brochures/vanalyze-v30s-brochure.pdf" title="Vanalyze V30s brochure (PDF, 7.6 MB)" download target="_blank" rel="noopener"><svg><use href="#i-download"/></svg>Vanalyze V30s <small>PDF</small></a><a class="p-dl" href="brochures/vanalyze-v30-pro-brochure.pdf" title="Vanalyze V30 Pro brochure (PDF)" download target="_blank" rel="noopener"><svg><use href="#i-download"/></svg>Vanalyze V30 Pro <small>PDF</small></a></div>
             <a class="p-link" href="#contact">Enquire now <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
           </div>
         </article>
@@ -413,6 +416,7 @@ footer{background:#071A31;color:#9FB1C7;font-size:.95rem}
             <h3>POCT &amp; Lab Equipment</h3>
             <p>Point-of-care readers and general lab equipment for clinics and small labs.</p>
             <ul><li><svg><use href="#i-check"/></svg>HbA1c, CRP and cardiac POC readers</li><li><svg><use href="#i-check"/></svg>Paired with Bindushree rapid tests</li></ul>
+            <a class="p-dl" href="brochures/finecare-fia-meter-plus-brochure.pdf" title="Finecare FIA Meter Plus brochure (PDF)" download target="_blank" rel="noopener"><svg><use href="#i-download"/></svg>Download Brochure <small>PDF</small></a>
             <a class="p-link" href="#contact">Enquire now <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
           </div>
         </article>
