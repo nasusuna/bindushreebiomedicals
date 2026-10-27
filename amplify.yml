@@ -8,5 +8,7 @@ frontend:
     baseDirectory: /
     files:
       - index.html
+      - sitemap.xml
+      - robots.txt
   cache:
     paths: []
